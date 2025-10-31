@@ -14,8 +14,22 @@ public class CustomList {
         cities.add(city);
     }
 
-    
+    // TDD Step 1: hasCity()
+    public boolean hasCity(City city) {
+        return cities.contains(city);
+    }
 
-    // Will be implemented later using TDD (leave blank for now)
-    // public boolean hasCity(City city) { ... }
+    // TDD Step 2: deleteCity()
+    public void deleteCity(City city) {
+        if (cities.contains(city)) {
+            cities.remove(city);
+        } else {
+            throw new IllegalArgumentException("City not found in list");
+        }
+    }
+
+    // TDD Step 3: countCities()
+    public int countCities() {
+        return cities.size();
+    }
 }
